@@ -1,3 +1,3 @@
 class Artist < ApplicationRecord
-    validates :name, :permalink, :bio, :formed_at, :verified, :verified_at, :avatar, :cover_photo, presence:true 
+    validates :name, :permalink, :bio, presence:true 
 end

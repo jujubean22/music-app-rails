@@ -14,6 +14,6 @@ Artist.create([
     }, 
         
     { name: 'Rita Ora' ,
-        permalink: "ritaora.com"
+        permalink: "ritaora.com",
         bio: "Singer from london"}
     ])

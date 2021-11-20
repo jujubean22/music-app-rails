@@ -1,0 +1,15 @@
+%table
+    %thead
+    %tr
+        %th Name
+        %th Permalink
+        %th Bio
+    %tbody
+    - @artists.each do |artist|
+        %tr
+        %td
+            = artist.name
+        %td
+            = artist.permalink
+        %td
+            = artist.bio.truncate(50)
