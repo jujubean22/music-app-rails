@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_224657) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "permalink"
+    t.text "bio"
     t.datetime "formed_at"
     t.boolean "verified", default: false
     t.datetime "verified_at"
