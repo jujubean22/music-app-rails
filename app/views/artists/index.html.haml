@@ -25,8 +25,13 @@
         %td= artist.formed_at
         %td= artist.verified
         %td= artist.verified_at
-        %td= image_tag artist.avatar, width: '50px'
-        %td= image_tag artist.cover_photo, width: '50px'
+
+        -if artist.avatar.attached?
+            %td= image_tag artist.avatar, width: '50px'
+
+        -if artist.avatar.attached?
+            %td= image_tag artist.cover_photo, width: '50px'
+
         %td= link_to 'Show', artist
         %td= link_to 'Edit', edit_artist_path(artist)
         %td= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' }

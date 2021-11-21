@@ -19,7 +19,7 @@ def create
     if @artist.save
         
         flash[:notice] = "An artist has been successfully created"
-        redirect_to artist_path
+        redirect_to artists_path
     else
         flash[:error] = "Error encountered"
         render :new
@@ -31,7 +31,7 @@ end
 
 def update
     if @artist.update(artist_params)
-        redirect_to artist_path
+        redirect_to artists_path
     else
         render :edit
     end
@@ -48,6 +48,6 @@ private
     end
 
     def artist_params
-    params.require(:artist).permit(:name, :permalink, :bio, :formed_at, :verified, :verified_at, :avatar, :cover_photo)
+    params.require(:artist).permit(:name, :permalink, :bio, :formed_at, :verified, :verified_at)
     end
 end
