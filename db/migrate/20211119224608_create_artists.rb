@@ -7,8 +7,8 @@ class CreateArtists < ActiveRecord::Migration[6.1]
       t.datetime :formed_at
       t.boolean :verified, default: false
       t.datetime :verified_at
-      t.string :avatar
-      t.string :cover_photo
+      t.binary :avatar
+      t.binary :cover_photo
 
       t.timestamps
     end

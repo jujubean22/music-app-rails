@@ -1,0 +1,25 @@
+
+%p
+  %strong Name:
+  = @artist.name
+%p
+  %strong Permalink:
+  = @artist.permalink
+%p
+  %strong Formed at:
+  = @artist.formed_at
+%p
+  %strong Verified:
+  = @artist.verified
+%p
+  %strong Verified at:
+  = @artist.verified_at
+%p
+  %strong Avatar:
+  = image_tag @artist.avatar, width: "200px"
+%p
+  %strong Cover photo:
+  = image_tag @artist.cover_photo, width: '200px'
+= link_to 'Edit', edit_artist_path(@artist)
+|
+= link_to 'Back', artists_path

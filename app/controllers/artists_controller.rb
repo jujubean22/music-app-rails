@@ -1,13 +1,13 @@
 class ArtistsController < ApplicationController
-    before_action :set_artist, only: [:edit, :update, :destroy]
+    before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
     
 def index
     @artists = Artist.all
 end
 
-# def show
-# end
+def show
+end
 
 def new
     @artist = Artist.new
@@ -19,7 +19,7 @@ def create
     if @artist.save
         
         flash[:notice] = "An artist has been successfully created"
-        redirect_to artists_path
+        redirect_to artist_path
     else
         flash[:error] = "Error encountered"
         render :new
@@ -31,7 +31,7 @@ end
 
 def update
     if @artist.update(artist_params)
-        redirect_to artists_path
+        redirect_to artist_path
     else
         render :edit
     end
