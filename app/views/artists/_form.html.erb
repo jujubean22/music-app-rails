@@ -1,0 +1,45 @@
+<%= form_with model: @artist do |form| %>
+    <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+    </div>
+
+    <div class="field">
+        <%= form.label :permalink %>
+        <%= form.text_field :permalink %>
+    </div>
+    <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_field :bio %>
+    </div>
+
+    <div class="field">
+    <%= form.label :formed_at %>
+    <%= form.datetime_select :formed_at %>
+    </div>
+
+    <div class="field">
+    <%= form.label :verified %>
+    <%= form.check_box :verified %>
+    </div>
+
+    <div class="field">
+    <%= form.label :verified_at %>
+    <%= form.datetime_select :verified_at %>
+    </div>
+
+
+    <div class="field">
+    <%= form.label :avatar %>
+    <%= form.text_field :avatar %>
+    </div>
+
+    <div class="field">
+    <%= form.label :cover_photo %>
+    <%= form.text_field :cover_photo %>
+    </div>
+
+    <div class="actions">
+    <%= form.submit %>
+    </div>
+    <% end %>

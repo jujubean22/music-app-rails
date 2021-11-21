@@ -1,15 +1,36 @@
+%h1 Music-App
+%p This is the artists page
+
+%a(href="https://www.google.com/")
+    google
+
 %table
     %thead
     %tr
         %th Name
         %th Permalink
         %th Bio
+        %th Formed at
+        %th Verified
+        %th Verified at
+        %th Avatar
+        %th Cover Photo
+        %th Actions
     %tbody
     - @artists.each do |artist|
         %tr
-        %td
-            = artist.name
-        %td
-            = artist.permalink
-        %td
-            = artist.bio.truncate(50)
+        %td= artist.name
+        %td= artist.permalink
+        %td= artist.bio.truncate(50)
+        %td= artist.formed_at
+        %td= artist.verified
+        %td= artist.verified_at
+        %td= artist.avatar
+        %td= artist.cover_photo
+        -# %td= link_to 'Show', album
+        %td= link_to 'Edit', edit_artist_path(artist)
+        %td= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' }
+
+
+= link_to new_artist_path do
+    New Artist

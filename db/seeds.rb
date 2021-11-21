@@ -6,14 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Artist.create([
-    { name: 'Taylor Swift', 
-        permalink: 'taylorswift.com', 
-        bio: "Taylor Swift was born in West Reading, Pennsylvania. When she was 13, her parents sold their family farm in Pennsylvania and moved to Hendersonville, Tennessee, so she could pursue a career in country music in nearby Nashville",
-        avatar: ""
+Artist.create(
+    { name: 'test3', 
+        permalink: 'test3', 
+        bio: 'test3',
+        formed_at: 'test3',
+        verified: 'test3',
+        verified_at: 'test3',
+        avatar: 'test3',
+        cover_photo: 'test3'
     }, 
         
-    { name: 'Rita Ora' ,
-        permalink: "ritaora.com",
-        bio: "Singer from london"}
-    ])
+)
