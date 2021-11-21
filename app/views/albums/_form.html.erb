@@ -1,0 +1,40 @@
+<%= form_with model: @album do |form| %>
+
+<div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+</div>
+
+<div class="field">
+    <%= form.label :released %>
+    <%= form.check_box :released %>
+</div>
+
+<div class="field">
+    <%= form.label :released_at %>
+    <%= form.datetime_select :released_at %>
+</div>
+
+<div class="field">
+    <%= form.label :cover_art %>
+    <%= form.file_field :cover_art %>
+</div>
+
+<div class="field">
+    <%= form.label :length %>
+    <%= form.number_field :length %>
+</div>
+
+<div class="field">
+    <%= form.radio_button :kind, 'EP' %>
+    <%= form.label :kind, 'EP', :value => 'EP' %>
+    <%= form.radio_button :kind, 'LP' %>
+    <%= form.label :kind, 'LP', :value => 'LP' %>
+    <%= form.radio_button :kind, 'Single' %>
+    <%= form.label :kind, 'Single', :value => 'Single' %>
+</div>
+
+<div class="actions">
+    <%= form.submit %>
+</div>
+<% end %>

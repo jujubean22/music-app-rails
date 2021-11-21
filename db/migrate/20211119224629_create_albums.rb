@@ -2,9 +2,9 @@ class CreateAlbums < ActiveRecord::Migration[6.1]
   def change
     create_table :albums do |t|
       t.string :name
-      t.datetime :released
+      t.boolean :released
       t.datetime :released_at
-      t.string :cover_art_url
+      t.binary :cover_art
       t.numeric :length
       t.string :kind
 

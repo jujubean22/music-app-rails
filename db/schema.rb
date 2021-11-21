@@ -42,9 +42,9 @@ ActiveRecord::Schema.define(version: 2021_11_21_184434) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
-    t.datetime "released"
+    t.boolean "released"
     t.datetime "released_at"
-    t.string "cover_art_url"
+    t.binary "cover_art"
     t.decimal "length"
     t.string "kind"
     t.datetime "created_at", precision: 6, null: false

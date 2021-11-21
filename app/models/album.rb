@@ -1,3 +1,4 @@
 class Album < ApplicationRecord
-    validates :name, :released, :released_at, :cover_art_url, :length, :kind, presence:true 
+    has_one_attached :cover_art
+    validates :name, :released, :released_at, :length, :kind, presence:true 
 end
