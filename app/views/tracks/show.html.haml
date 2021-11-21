@@ -1,0 +1,22 @@
+
+-if @track.url.attached?
+  %p
+    %strong Cover Art:
+    = audio_tag @track.url
+%p
+  %strong Name:
+  = @track.name
+%p
+  %strong Formed at:
+  = @track.formed_at
+%p
+  %strong Credits:
+  = @track.credits
+%p
+  %strong Available:
+  = @track.available
+
+
+= link_to 'Edit', edit_track_path(@track)
+|
+= link_to 'Back', track_path

@@ -1,0 +1,26 @@
+%h1 Music-App
+%p This is the tracks page
+
+%table
+    %thead
+    %tr
+        %th URL
+        %th Name
+        %th Credits
+        %th Available
+        %th Actions
+    %tbody
+    - @tracks.each do |track|
+        %tr
+        -if track.url.attached?
+            %td= = audio_tag track.url
+        %td= track.name
+        %td= track.credits.truncate(50)
+        %td= track.available
+        %td= link_to 'Show', track
+        %td= link_to 'Edit', edit_track_path(track)
+        %td= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' }
+
+
+= link_to new_track_path do
+    New track
