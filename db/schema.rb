@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_11_21_184434) do
   end
 
   create_table "tracks", force: :cascade do |t|
-    t.binary "url"
+    t.text "url"
     t.string "name"
     t.text "credits"
     t.boolean "available"

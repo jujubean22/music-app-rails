@@ -18,7 +18,7 @@ def create
     @track = Track.new(track_params)
     if @track.save
         
-        flash[:notice] = "An track has been successfully created"
+        flash[:notice] = "A track has been successfully created"
         redirect_to tracks_path
     else
         flash[:error] = "Error encountered"

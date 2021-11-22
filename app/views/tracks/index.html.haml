@@ -12,8 +12,7 @@
     %tbody
     - @tracks.each do |track|
         %tr
-        -if track.url.attached?
-            %td= = audio_tag track.url
+        %td= track.url
         %td= track.name
         %td= track.credits.truncate(50)
         %td= track.available
