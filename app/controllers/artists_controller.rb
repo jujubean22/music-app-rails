@@ -48,6 +48,6 @@ private
     end
 
     def artist_params
-    params.require(:artist).permit(:name, :permalink, :bio, :formed_at, :verified, :verified_at)
+    params.require(:artist).permit(:name, :avatar, :cover_photo, :permalink, :bio, :formed_at, :verified, :verified_at)
     end
 end
