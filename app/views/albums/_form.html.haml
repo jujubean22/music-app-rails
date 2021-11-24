@@ -1,0 +1,28 @@
+= form_with model: @album do |form|
+  .form-container
+    .form-group
+      = form.label :name
+      = form.text_field :name, class:'form-control'
+    .form-group
+      = form.label :released
+      = form.check_box :released
+    .form-group
+      = form.label :released_at
+      = form.datetime_select :released_at, class:'form-control'
+    .form-group
+      = form.label :cover_art
+      = form.file_field :cover_art
+    .form-group
+      = form.label :length
+      = form.number_field :length, class:'form-control'
+    .form-group
+      = form.label :kind
+      = form.radio_button :kind, 'EP'
+      = form.label :kind, 'EP', :value => 'EP'
+      = form.radio_button :kind, 'LP'
+      = form.label :kind, 'LP', :value => 'LP'
+      = form.radio_button :kind, 'Single'
+      = form.label :kind, 'Single', :value => 'Single'
+    = form.submit class:"btn btn-primary"
+
+= link_to 'Back', albums_path, {class: 'btn btn-outline-success'}

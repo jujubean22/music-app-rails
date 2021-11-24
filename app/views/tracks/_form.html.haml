@@ -1,0 +1,16 @@
+= form_with model: @track do |form|
+  .form-container
+    .form-group
+      = form.label :url
+      = form.url_field :url, class:'form-control'
+    .form-group
+      = form.label :name
+      = form.text_field :name, class:'form-control'
+    .form-group
+      = form.label :credits
+      = form.text_field :credits, class:'form-control'
+    .form-group
+      = form.label :available
+      = form.check_box :available
+    = form.submit class:"btn btn-primary"
+= link_to 'Back', tracks_path, {class: 'btn btn-outline-success'}

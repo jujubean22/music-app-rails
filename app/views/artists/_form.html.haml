@@ -1,0 +1,29 @@
+= form_with model: @artist do |form|
+  .form-container
+    .form-group 
+      = form.label :name
+      = form.text_field :name, class:'form-control'
+    .form-group
+      = form.label :permalink
+      = form.url_field :permalink, class:'form-control'
+    .form-group
+      = form.label :bio
+      = form.text_field :bio, class:'form-control'
+    .form-group
+      = form.label :formed_at
+      = form.datetime_select :formed_at, class:'form-control'
+    .form-group
+      = form.label :verified
+      = form.check_box :verified
+    .form-group
+      = form.label :verified_at
+      = form.datetime_select :verified_at, class:'form-control'
+    .form-group
+      = form.label :avatar
+      = form.file_field :avatar, class:'form-control'
+    .form-group
+      = form.label :cover_photo
+      = form.file_field :cover_photo, class:'form-control'
+    .actions
+      = form.submit class:"btn btn-primary"
+      = link_to 'Back', artist_path, {class: 'btn btn-outline-success'}
