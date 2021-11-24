@@ -1,24 +1,22 @@
 %h1 Track List
 
-%table{ class: 'table'}
+%table{ class: 'table table-striped table-bordered tabl-dark'}
     %thead
     %tr
-        %th URL
-        %th Name
-        %th Credits
-        %th Available
-        %th Actions
+        %th{class: 'text-center'} URL
+        %th{class: 'text-center'} Name
+        %th{class: 'text-center'} Credits
+        %th{class: 'text-center'} Available
+        %th{:colspan => 5, :class => 'text-center'} Action
     %tbody
     - @tracks.each do |track|
         %tr
-        %td= track.url
-        %td= track.name
-        %td= track.credits.truncate(50)
-        %td= track.available
-        %td= link_to 'Show', track
-        %td= link_to 'Edit', edit_track_path(track)
-        %td= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' }
+        %td{class: 'text-center'}= track.url
+        %td{class: 'text-center'}= track.name
+        %td{class: 'text-center'}= track.credits.truncate(50)
+        %td{class: 'text-center'}= track.available
+        %td{class: 'text-center'}= link_to 'Show', track
+        %td{class: 'text-center'}= link_to 'Edit', edit_track_path(track)
+        %td{class: 'text-center'}= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' }
 
-
-= link_to new_track_path do
-    New track
+= link_to 'New Track', new_track_path, {class: 'btn btn-outline-primary'}

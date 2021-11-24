@@ -1,18 +1,15 @@
-
-%p
-  %strong Cover Art:
+%h1.display-4=@track.name
+%p.lead
+  %strong URL:
   = @track.url
-%p
-  %strong Name:
-  = @track.name
-%p
+%p.lead
   %strong Credits:
   = @track.credits
-%p
+%p.lead
   %strong Available:
   = @track.available
 
 
-= link_to 'Edit', edit_track_path(@track)
-|
-= link_to 'Back', tracks_path
+= link_to 'Edit', edit_track_path(@track), {class: 'btn btn-outline-primary'}
+
+= link_to 'Back', tracks_path, {class: 'btn btn-outline-success'}

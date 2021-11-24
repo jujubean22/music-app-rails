@@ -18,3 +18,18 @@
     padding: 2px;
     background-color: rgb(194, 106, 106);
 }
+
+.form-container{
+    font-size: 2vh;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    height: 50vh ;
+    width: 50vw;
+    margin:auto
+}
+
+.form-group{
+    padding: 10px;
+}

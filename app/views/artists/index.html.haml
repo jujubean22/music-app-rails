@@ -1,37 +1,37 @@
 %h1 Artist List
 
-%table{ class: 'table'}
+%table{ class: 'table table-striped table-bordered tabl-dark'}
     %thead
     %tr
-        %th Name
-        %th Permalink
-        %th Bio
-        %th Formed at
-        %th Verified
-        %th Verified at
-        %th Avatar
-        %th Cover Photo
-        %th Actions
+        %th{class: 'text-center'} Name
+        %th{class: 'text-center'} Permalink
+        %th{class: 'text-center'} Bio
+        %th{class: 'text-center'} Formed at
+        %th{class: 'text-center'} Verified
+        %th{class: 'text-center'} Verified at
+        %th{class: 'text-center'} Avatar
+        %th{class: 'text-center'} Cover Photo
+        %th{:colspan => 5, :class => 'text-center'} Actions
     %tbody
     - @artists.each do |artist|
         %tr
-        %td= artist.name
-        %td= artist.permalink
-        %td= artist.bio.truncate(50)
-        %td= artist.formed_at
-        %td= artist.verified
-        %td= artist.verified_at
+        %td{class: 'text-center'}= artist.name
+        %td{class: 'text-center'}= artist.permalink
+        %td{class: 'text-center'}= artist.bio.truncate(50)
+        %td{class: 'text-center'}= artist.formed_at
+        %td{class: 'text-center'}= artist.verified
+        %td{class: 'text-center'}= artist.verified_at
 
         -if artist.avatar.attached?
-            %td= image_tag artist.avatar, width: '50px'
+            %td{class: 'text-center'}= image_tag artist.avatar, width: '50px'
 
         -if artist.avatar.attached?
-            %td= image_tag artist.cover_photo, width: '50px'
+            %td{class: 'text-center'}= image_tag artist.cover_photo, width: '50px'
 
-        %td= link_to 'Show', artist
-        %td= link_to 'Edit', edit_artist_path(artist)
-        %td= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' }
+        %td{class: 'text-center'}= link_to 'Show', artist
+        %td{class: 'text-center'}= link_to 'Edit', edit_artist_path(artist)
+        %td{class: 'text-center'}= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' }
 
 
-= link_to new_artist_path do
-    New Artist
+= link_to 'New Artist', new_artist_path, {class: 'btn btn-outline-primary'}
+    

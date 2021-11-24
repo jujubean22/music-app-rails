@@ -1,6 +1,5 @@
 
-%p
-  %strong Name:
+%h1.display-4
   = @artist.name
 %p
   %strong Permalink:
@@ -24,6 +23,5 @@
   %p
     %strong Cover photo:
     = image_tag @artist.cover_photo, width: '200px'
-= link_to 'Edit', edit_artist_path(@artist)
-|
-= link_to 'Back', artists_path
+= link_to 'Edit', edit_artist_path(@artist), {class: 'btn btn-outline-primary'}
+= link_to 'Back', artists_path, {class: 'btn btn-outline-success'}
